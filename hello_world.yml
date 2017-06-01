@@ -2,6 +2,7 @@
   hosts: 10.0.0.202
   tasks:
     - name: restart docker
+      apt: docker-py
       docker:
         name: portainer
         state: started
