@@ -1,6 +1,10 @@
 - name: Docker Restarter
   hosts: 10.0.0.202
   tasks:
+    - name: apt install pip
+      apt:
+        name: pip
+        state: present
     - name: pip ensure docker-py is installed
       pip:
        name: docker-py
