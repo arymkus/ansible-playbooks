@@ -3,7 +3,7 @@
   tasks:
     - name: ensure docker-py is installed
       apt: docker-py
-    - name:
+    - name: portainer starter
       docker:
         name: portainer
         state: started
