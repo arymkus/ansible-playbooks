@@ -1,8 +1,9 @@
 - name: Docker Restarter
   hosts: 10.0.0.202
   tasks:
-    - name: restart docker
+    - name: ensure docker-py is installed
       apt: docker-py
+    - name:
       docker:
         name: portainer
         state: started
