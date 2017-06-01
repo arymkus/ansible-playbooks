@@ -3,5 +3,5 @@
   tasks:
     - name: restart docker
       service: name=docker state=restarted
-        msg: "Docker has been restarted"
+      msg: "Docker has been restarted"
       
