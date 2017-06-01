@@ -1,5 +1,8 @@
 - name: Docker Restarter
-  hosts: all
+  hosts: 10.0.0.202
   tasks:
     - name: restart docker
-      service: name=docker state=restarted
+      docker:
+        name: portainer
+        state: started
+  
