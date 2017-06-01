@@ -2,9 +2,9 @@
   hosts: 10.0.0.202
   tasks:
     - name: pip ensure docker-py is installed
-       pip:
-        name: docker-py
-        state: present
+      pip:
+       name: docker-py
+       state: present
     - name: portainer starter
       docker:
         name: portainer
