@@ -5,4 +5,4 @@
       docker:
         name: portainer
         state: started
-  
+        image: portainer/portainer
