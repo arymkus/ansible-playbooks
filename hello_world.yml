@@ -1,7 +1,7 @@
-- name: Hello World Sample
+- name: Docker Restarter
   hosts: all
   tasks:
-    - name: Hello Message
-      debug:
-        msg: "Hello World!"
-
+    - name: restart docker
+      service: name=docker state=restarted
+        msg: "Docker has been restarted"
+      
