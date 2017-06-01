@@ -3,7 +3,7 @@
   tasks:
     - name: apt install pip
       apt:
-        name: pip
+        name: python
         state: present
     - name: pip ensure docker-py is installed
       pip:
