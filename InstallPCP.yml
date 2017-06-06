@@ -2,6 +2,5 @@
   hosts: 10.0.0.91
   tasks:
     - apt_repository:
-      repo: https://dl.bintray.com/pcp/xenial xenial main
-      state: present
-    
+        repo: https://dl.bintray.com/pcp/xenial xenial main
+        state: present
