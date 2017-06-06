@@ -1,5 +1,5 @@
 - name: Install PCP
-  hosts: 10.0.0.91
+  hosts: localhost
   tasks:
     - apt_repository:
         repo: https://dl.bintray.com/pcp/xenial xenial main
