@@ -1,6 +1,7 @@
 - name: Install PCP
   hosts: localhost
   tasks:
-    - apt_repository:
-        repo: https://dl.bintray.com/pcp/xenial xenial main
-        state: present
+    - name: Add repository
+      - apt_repository:
+          repo: https://dl.bintray.com/pcp/xenial xenial main
+          state: present
