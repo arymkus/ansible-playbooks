@@ -10,3 +10,4 @@
       with_items:
         - pcp
         - pcp-webapi
+      update_cache: yes
