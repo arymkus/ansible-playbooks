@@ -6,7 +6,7 @@
         repo: deb https://dl.bintray.com/pcp/xenial xenial main
         state: present
     - name: Install pcp using apt
-      apt: name={{item}} state=installed update_cache=yes allow_unauthenticated=yes
+      apt: name={{item}} state=absent update_cache=yes allow_unauthenticated=yes
       with_items:
         - pcp
         - pcp-webapi
