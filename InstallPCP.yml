@@ -1,7 +1,8 @@
 - name: Install PCP
-  hosts: 10.0.0.98
+  hosts: Virtual Servers
   tasks:
     - name: Add repository
       apt_repository:
-        repo: https://dl.bintray.com/pcp/zesty/ zesty main
+        repo: https://dl.bintray.com/pcp/xenial xenial main
         state: present
+        
