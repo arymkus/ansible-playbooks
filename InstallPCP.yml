@@ -1,8 +1,7 @@
 - name: Install PCP
-  hosts: localhost
+  hosts: 10.0.0.98
   tasks:
     - name: Add repository
       apt_repository:
-        repo: https://dl.bintray.com/pcp/xenial xenial main
+        repo: https://dl.bintray.com/pcp/zesty/ zesty main
         state: present
-      become: ture
