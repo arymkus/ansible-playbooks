@@ -3,5 +3,5 @@
   tasks:
     - name: Add repository
       apt_repository:
-        repo: https://dl.bintray.com/pcp/xenial xenial main
+        repo: deb https://dl.bintray.com/pcp/xenial xenial main
         state: present
