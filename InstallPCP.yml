@@ -5,3 +5,8 @@
       apt_repository:
         repo: deb https://dl.bintray.com/pcp/xenial xenial main
         state: present
+    - name: Install pcp using apt
+      apt:
+        name: pcp pcp-webapi
+        state: present
+        update_cache: yes
