@@ -1,11 +1,11 @@
-- name: Install PCP
+- name: Uninstall PCP
   hosts: all
   tasks:
     - name: Add repository
       apt_repository:
         repo: deb https://dl.bintray.com/pcp/xenial xenial main
         state: present
-    - name: Install pcp using apt
+    - name: Uninstall pcp using apt
       apt: name={{item}} state=absent update_cache=yes allow_unauthenticated=yes
       with_items:
         - pcp
