@@ -1,8 +1,7 @@
 - name: Install PCP
-  hosts: Virtual Servers
+  hosts: all
   tasks:
     - name: Add repository
       apt_repository:
         repo: https://dl.bintray.com/pcp/xenial xenial main
         state: present
-        
