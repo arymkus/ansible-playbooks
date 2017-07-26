@@ -1,11 +1,3 @@
----
-# file: tasks/install-node-exporter.yml
-#
-# Install Prometheus node-exporter.
-#
-# @see http://prometheus.io/docs/introduction/getting_started/
-#
-
 - block:
 
     - name: set internal variables for convenience
