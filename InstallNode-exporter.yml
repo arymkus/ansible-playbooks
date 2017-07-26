@@ -1,0 +1,8 @@
+- name: Install prometheus node-exporter
+  hosts: all
+  tasks:
+    - name: Install prometheus node-exporter using apt
+      apt: name={{item}} state=absent update_cache=yes allow_unauthenticated=yes
+      with_items:
+        - prometheus 
+        - node-exporter
