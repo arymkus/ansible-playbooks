@@ -3,7 +3,7 @@
   tasks:    
     - name: Add repository
       apt_repository:
-        repo: deb https://dl.bintray.com/pcp/xenial xenial main
+        repo: deb http://deb.robustperception.io/ precise nightly
         state: present
     - name: Install prometheus node-exporter using apt
       apt: name={{item}} state=present update_cache=yes allow_unauthenticated=yes
