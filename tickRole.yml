@@ -1,4 +1,5 @@
-- hosts: servers
+- name: install tick
+  hosts: servers
   remote_user: root
   roles:
      - mlabouardy.tick
