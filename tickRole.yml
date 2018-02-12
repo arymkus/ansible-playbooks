@@ -1,5 +1,4 @@
-- name: install tick
-  hosts: 10.0.0.206
+- hosts: 10.0.0.206
   remote_user: narwal
   roles:
      - mlabouardy.tick
