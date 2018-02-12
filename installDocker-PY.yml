@@ -1,0 +1,7 @@
+
+- name: install TICK
+  hosts: 10.0.0.206
+  tasks:    
+    - name: install docker-py
+      pip:
+        name: docker-py
