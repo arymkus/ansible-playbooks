@@ -1,5 +1,7 @@
 ---
+- name: Install Telegraf on client computers
 - hosts: 10.0.0.206
+  tasks:
   - name: Install Telegraf
     apt:
       deb: https://dl.influxdata.com/telegraf/releases/telegraf_1.4.3-1_amd64.deb
