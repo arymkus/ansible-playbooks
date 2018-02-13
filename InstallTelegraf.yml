@@ -9,7 +9,8 @@
       name: telegraf
       state: started
   - name: configuring Telegraf
-    replace:
+    ini_file:
       path: /etc/telegraf/telegraf.conf
-      regexp: '^urls = \["http://localhost:8086"\] # required$'
-      replace: 'urls = ["http://10.0.0.207:8086"]'
+      section: [outputs.influxdb]
+      option: urls
+      value: ["http://10.0.0.207:8086"]
