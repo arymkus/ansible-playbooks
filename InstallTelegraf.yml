@@ -10,6 +10,6 @@
       state: started
   - name: configuring Telegraf
     lineinfile:
-      path: /etc/selinux/config
+      path: /etc/telegraf/telegraf.conf
       regexp: '^urls = '
       line: 'urls = ["http://localhost:8086"]'
