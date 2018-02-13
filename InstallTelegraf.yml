@@ -8,16 +8,13 @@
     service:
       name: telegraf
       state: started
-  - name: Start Telegraf
-    service:
-      name: telegraf
-      state: stopped
   - name: configuring Telegraf
-    lineinfile:
-      path: /etc/telegraf/telegraf.conf
-      regexp: '^urls = '
-      line: 'urls = ["http://10.0.0.207:8086"]'
-  - name: Start Telegraf
+      ini_file:
+      /etc/telegraf/telegraf.conf
+      section: [[outputs.influxdb]]
+      option: urls
+      value:  ["http://10.0.0.207:8086"]
+  - name: restart Telegraf
     service:
       name: telegraf
-      state: started
+      state: restarted
