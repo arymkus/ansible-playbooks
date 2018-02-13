@@ -9,11 +9,11 @@
       name: telegraf
       state: started
   - name: configuring Telegraf
-      ini_file:
-        path: /etc/telegraf/telegraf.conf
-        section: [[outputs.influxdb]]
-        option: urls
-        value:  ["http://10.0.0.207:8086"]
+    ini_file:
+      path: /etc/telegraf/telegraf.conf       
+      section: [[outputs.influxdb]
+      option: urls
+      value:  ["http://10.0.0.207:8086"]
   - name: restart Telegraf
     service:
       name: telegraf
