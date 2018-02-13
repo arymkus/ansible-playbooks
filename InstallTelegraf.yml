@@ -1,5 +1,5 @@
 ---
-- hosts: 10.0.0.206
+- hosts: all
   tasks:
   - name: Install Telegraf
     apt:
