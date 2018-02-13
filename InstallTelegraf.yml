@@ -13,4 +13,4 @@
   - lineinfile:
       path: /etc/telegraf/telegraf.conf
       regexp: '^urls = ["http://localhost:8086"]'
-      line: ' urls = ["http://10.0.0.207:8086"]
+      line: ' urls = ["http://10.0.0.207:8086"]'
