@@ -13,4 +13,4 @@
       path: /etc/telegraf/telegraf.conf
       section: [outputs.influxdb]
       option: urls
-      value: ["http://10.0.0.206:8086"]
+      value: ["http://10.0.0.207:8086"]
