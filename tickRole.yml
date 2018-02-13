@@ -7,6 +7,10 @@
     - name: install docker-py using PIP
       pip:
         name: docker-py
+    - name: Creates directory
+        file: 
+          path: /home/root
+          state: directory
 - hosts: 10.0.0.206
   remote_user: narwal
   roles:
