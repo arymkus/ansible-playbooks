@@ -1,9 +1,12 @@
-- name: install TICK
+- name: install install docker-py
   hosts: 10.0.0.206
-  remote_user: narwal
-  tasks:    
-    - name: install docker-py
+    tasks:    
+    - name: install docker-py using pip
       pip:
         name: docker-py
+  
+- name: install TICK from Galaxy
+  hosts: 10.0.0.206
+  remote_user: narwal
   roles:
     - mlabouardy.tick
