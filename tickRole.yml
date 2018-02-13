@@ -1,7 +1,6 @@
-- name: install install docker-py
-  hosts: 10.0.0.206
-    tasks:    
-    - name: install docker-py using pip
+- hosts: 10.0.0.206
+  tasks:    
+    - name: install docker-py using PIP
       pip:
         name: docker-py
 - hosts: 10.0.0.206
