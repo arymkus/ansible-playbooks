@@ -5,24 +5,28 @@
   - name: Install InfluxDB
     apt:
       deb: wget https://dl.influxdata.com/influxdb/releases/influxdb_1.4.0_amd64.deb
+  - name: start InfluxDB
     service:
       name: influxdb
       state: started
   - name: Install Kapacitor
     apt:
       deb:  https://dl.influxdata.com/kapacitor/releases/kapacitor_1.4.0_amd64.deb
+  - name: start Kapacitor
     service:
       name: kapacitor
       state: started
   - name: Install Telegraf.
     apt:
       deb: https://dl.influxdata.com/telegraf/releases/telegraf_1.4.3-1_amd64.deb
+  - name: Start Telegraf
     service:
       name: telegraf
       state: started
   - name: Install Chronograf
     apt:
       deb: https://dl.influxdata.com/chronograf/releases/chronograf_1.4.0.0_amd64.deb
+  - name: Start Chronograf
     service:
       name: chronograf
       state: started
