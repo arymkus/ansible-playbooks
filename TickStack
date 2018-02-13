@@ -1,0 +1,28 @@
+---
+- name: install Tick Stack BERNARD EDITION
+  hosts: 10.0.0.207
+  tasks: 
+  - name: Install InfluxDB
+    apt:
+      deb: wget https://dl.influxdata.com/influxdb/releases/influxdb_1.4.0_amd64.deb
+    service:
+      name: influxdb
+      state: started
+  - name: Install Kapacitor
+    apt:
+      deb:  https://dl.influxdata.com/kapacitor/releases/kapacitor_1.4.0_amd64.deb
+    service:
+      name: kapacitor
+      state: started
+  - name: Install a .deb package from the internet.
+    apt:
+      deb: https://dl.influxdata.com/telegraf/releases/telegraf_1.4.3-1_amd64.deb
+    service:
+      name: telegraf
+      state: started
+  - name: Install a .deb package from the internet.
+    apt:
+      deb: https://dl.influxdata.com/chronograf/releases/chronograf_1.4.0.0_amd64.deb
+    service:
+      name: chronograf
+      state: started
