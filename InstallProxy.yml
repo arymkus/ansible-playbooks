@@ -1,0 +1,6 @@
+---
+- hosts: "{{ hosts | mandatory }}"
+  become: true
+  roles:
+    - SoInteractive.nginx
+    - tersmitten.fail2ban
