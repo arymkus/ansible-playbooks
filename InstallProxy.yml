@@ -1,7 +1,11 @@
 ---
 - hosts: "{{ hosts | mandatory }}"
+  - name: Install Golang
+    apt:
+      name: golang-go
+      state: present
+- hosts: "{{ hosts | mandatory }}"
   become: true
   roles:
-    - joshualund.golang
     - SoInteractive.nginx
     - tersmitten.fail2ban
