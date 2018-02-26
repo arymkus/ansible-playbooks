@@ -2,5 +2,6 @@
 - hosts: "{{ hosts | mandatory }}"
   become: true
   roles:
+    - joshualund.golang
     - SoInteractive.nginx
     - tersmitten.fail2ban
