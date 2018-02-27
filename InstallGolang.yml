@@ -1,0 +1,8 @@
+---
+- hosts: "{{ hosts | mandatory }}"
+  become: true
+  tasks:
+  - name: Install Golang
+    apt:
+      name: golang-go
+      state: present
